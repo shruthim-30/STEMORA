@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+
+    <title>STEMORA</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/stemora-favicon.png" />
+
+    <!-- Botpress Webchat -->
+    <script
+      src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"
+      defer
+    ></script>
+
+    <script
+      src="https://files.bpcontent.cloud/2025/12/29/14/20251229140407-POBX3U3P.js"
+      defer
+    ></script>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      /* Embedded chatbot styles */
+      #webchat .bpWebchat {
+        position: unset;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      /* Hide floating button (we embed manually) */
+      #webchat .bpFab {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- React Root -->
+    <div id="root"></div>
+
+    <!-- Botpress Container -->
+    <div id="webchat" style="width: 500px; height: 500px;"></div>
+
+    <!-- React Entry -->
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Botpress Init -->
+    <script>
+      window.botpress?.on("webchat:ready", () => {
+        window.botpress.open();
+      });
+
+      window.botpress?.init({
+        botId: "8e1bca2d-36fd-4a58-9b6f-7b28a47dd3dc",
+        clientId: "9dd74771-c221-4865-950a-47c712debf15",
+        selector: "#webchat",
+        configuration: {
+          version: "v2",
+          botName: "BLINK 🤖",
+          botAvatar:
+            "https://files.bpcontent.cloud/2025/12/29/14/20251229142145-US21XLES.svg",
+          color: "#8419e2",
+          themeMode: "light",
+          fontFamily: "inter",
+          radius: 3,
+          feedbackEnabled: false,
+          soundEnabled: false,
+          proactiveMessageEnabled: false,
+          proactiveBubbleMessage: "Hi! 👋 Need help?",
+          proactiveBubbleTriggerType: "afterDelay",
+          proactiveBubbleDelayTime: 10,
+          email: {
+            title: "stemoraeducation@gmail.com",
+            link: "stemoraeducation@gmail.com"
+          },
+          phone: {
+            title: "+91 7090000417",
+            link: "+91 7090000417"
+          },
+          footer: "[⚡ by Botpress](https://botpress.com/?from=webchat)"
+        }
+      });
+    </script>
+  </body>
+</html>
