@@ -31,9 +31,9 @@ export default function Contact() {
         </section>
 
         {/* Contact Info & CTA */}
-        <section className="py-24 bg-white">
+        <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-16 items-start">
+            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
               <Reveal>
                 <div>
                   <h2 className="text-3xl font-extrabold mb-9 text-slate-900 tracking-tight">

@@ -94,7 +94,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % heroImages.length);
-    }, 3500);
+    }, 2000);
     return () => clearInterval(timer);
   }, []);
 
@@ -103,7 +103,7 @@ export default function Home() {
       <Header />
 
       {/* ===== HERO ===== */}
-      <section className="aurora relative overflow-hidden pt-20 pb-24 md:pt-28 md:pb-32 bg-white">
+      <section className="aurora relative overflow-hidden pt-14 pb-16 md:pt-28 md:pb-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
@@ -148,7 +148,7 @@ export default function Home() {
               </Reveal>
 
               <Reveal delay={0.2}>
-                <div className="grid grid-cols-4 gap-3 max-w-lg">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 max-w-lg">
                   <Counter label="Mentors" value={counters.mentors} icon={Users} color="yellow" />
                   <Counter label="Schools" value={counters.schools} icon={School} color="blue" />
                   <Counter label="Internships" value={counters.internships} icon={Briefcase} color="blue" />
@@ -190,7 +190,7 @@ export default function Home() {
       </section>
 
       {/* ===== CORE OFFERINGS ===== */}
-      <section id="cour" className="py-24 bg-gradient-to-b from-slate-50 to-white">
+      <section id="cour" className="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto px-4">
           <Reveal className="flex flex-col items-center text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight max-w-2xl">
@@ -231,7 +231,7 @@ export default function Home() {
       </section>
 
       {/* ===== CORE SUBJECTS ===== */}
-      <section className="py-24 bg-gradient-to-br from-[#0A3D91]/5 via-[#5CE1E6]/8 to-[#FFDE59]/8 relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-[#0A3D91]/5 via-[#5CE1E6]/8 to-[#FFDE59]/8 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <Reveal className="flex flex-col items-center text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight max-w-2xl">
@@ -264,8 +264,8 @@ export default function Home() {
       </section>
 
       {/* ===== INTERNSHIP ===== */}
-      <section id="internships" className="aurora py-24 bg-gradient-to-br from-[#5CE1E6]/[0.07] via-white to-[#FFDE59]/[0.07]">
-        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+      <section id="internships" className="aurora py-16 md:py-24 bg-gradient-to-br from-[#5CE1E6]/[0.07] via-white to-[#FFDE59]/[0.07]">
+        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <Reveal>
             <div>
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-5 leading-tight">
@@ -298,7 +298,7 @@ export default function Home() {
       </section>
 
       {/* ===== GALLERY ===== */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-16 md:py-24 bg-slate-50">
         <div className="container mx-auto px-4">
           <Reveal className="flex flex-col items-center text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -309,7 +309,7 @@ export default function Home() {
             </p>
           </Reveal>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
             {galleryImages.map((img, i) => (
               <Reveal key={img.id} delay={(i % 3) * 0.06}>
                 <div className="media-tile group relative h-64 md:h-72 rounded-2xl overflow-hidden bg-white border border-slate-200/70">
@@ -330,7 +330,7 @@ export default function Home() {
       </section>
 
       {/* ===== TESTIMONIALS ===== */}
-      <section className="py-24 bg-gradient-to-b from-slate-50/80 to-white">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-slate-50/80 to-white">
         <div className="container mx-auto px-4">
           <Reveal className="flex flex-col items-center text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -397,7 +397,7 @@ export default function Home() {
       </section>
 
       {/* ===== PARTNERS ===== */}
-      <section className="py-20 overflow-hidden bg-gradient-to-r from-[#E6FAFD] via-[#ECFEFF] to-[#FFF6D5]">
+      <section className="py-14 md:py-20 overflow-hidden bg-gradient-to-r from-[#E6FAFD] via-[#ECFEFF] to-[#FFF6D5]">
         <Reveal className="container mx-auto px-4 text-center mb-12">
           <span className="eyebrow mb-4 mx-auto">
             <span className="eyebrow-dot" />

@@ -68,7 +68,7 @@ export default function Courses() {
       <main className="flex-grow">
 
         {/* Hero */}
-        <section className="aurora aurora-dark relative overflow-hidden py-24 md:py-28 bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white">
+        <section className="aurora aurora-dark relative overflow-hidden py-16 md:py-28 bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white">
           <Reveal className="relative container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-6xl font-extrabold mb-5 tracking-tight">Our Courses</h1>
             <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
@@ -78,18 +78,18 @@ export default function Courses() {
         </section>
 
         {/* Course Cards */}
-        <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white">
           <div className="container mx-auto px-4">
 
             {/* top 3 */}
-            <div className="grid md:grid-cols-3 gap-6 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               {courses.slice(0, 3).map((course, i) => (
                 <CourseCard key={course.title} course={course} i={i} onBook={() => setContactModalOpen(true)} />
               ))}
             </div>
 
             {/* bottom 2 centered */}
-            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               {courses.slice(3).map((course, i) => (
                 <CourseCard key={course.title} course={course} i={i + 3} onBook={() => setContactModalOpen(true)} />
               ))}

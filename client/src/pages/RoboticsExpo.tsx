@@ -41,7 +41,7 @@ export default function RoboticsExpo() {
       <main className="flex-grow">
 
         {/* Hero */}
-        <section className="aurora aurora-dark relative overflow-hidden py-24 md:py-32 bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white">
+        <section className="aurora aurora-dark relative overflow-hidden py-16 md:py-32 bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white">
           <Reveal className="relative container mx-auto px-4 text-center">
             <div className="inline-flex items-center gap-2 bg-[#5CE1E6]/10 border border-[#5CE1E6]/20 rounded-full px-4 py-1.5 mb-6">
               <Zap className="w-3.5 h-3.5 text-[#5CE1E6]" />
@@ -53,7 +53,7 @@ export default function RoboticsExpo() {
             <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed mb-4">
               The biggest student robotics competition in the region. Build, compete, and showcase your innovation on the grandest stage.
             </p>
-            <div className="flex items-center justify-center gap-6 text-sm text-gray-400 mb-10">
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-400 mb-10">
               <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4 text-[#5CE1E6]" /> Coming Soon — 2025</span>
               <span className="flex items-center gap-1.5"><MapPin className="w-4 h-4 text-[#5CE1E6]" /> Venue TBA</span>
             </div>
@@ -67,9 +67,9 @@ export default function RoboticsExpo() {
         </section>
 
         {/* Highlights */}
-        <section className="py-24 bg-white">
+        <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
-            <Reveal className="text-center mb-14">
+            <Reveal className="text-center mb-10 md:mb-14">
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">What to Expect</h2>
               <p className="text-slate-500 mt-3 max-w-xl mx-auto text-base leading-relaxed">
                 A full day of high-energy robotics action, innovation, and celebration.
@@ -98,9 +98,9 @@ export default function RoboticsExpo() {
         </section>
 
         {/* Categories + Timeline */}
-        <section className="py-24 bg-gradient-to-br from-[#0A3D91]/5 via-[#5CE1E6]/8 to-[#FFDE59]/8">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-[#0A3D91]/5 via-[#5CE1E6]/8 to-[#FFDE59]/8">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-14 items-start">
+            <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-start">
 
               {/* Categories */}
               <Reveal>
@@ -143,9 +143,9 @@ export default function RoboticsExpo() {
         </section>
 
         {/* Who Can Participate */}
-        <section className="py-24 bg-white">
+        <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-14 items-center">
+            <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
               <Reveal>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-5 tracking-tight">Who Can Participate?</h2>
                 <p className="text-slate-500 leading-relaxed mb-8 text-[0.95rem]">

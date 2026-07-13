@@ -31,7 +31,7 @@ export default function Internships() {
       <main className="flex-grow">
 
         {/* Hero */}
-        <section className="aurora aurora-dark relative overflow-hidden py-24 md:py-28 bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white">
+        <section className="aurora aurora-dark relative overflow-hidden py-16 md:py-28 bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white">
           <Reveal className="relative container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-6xl font-extrabold mb-5 tracking-tight">
               Internship Program
@@ -49,9 +49,9 @@ export default function Internships() {
         </section>
 
         {/* Why Intern */}
-        <section className="py-24 bg-white">
+        <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
-            <Reveal className="text-center mb-14">
+            <Reveal className="text-center mb-10 md:mb-14">
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
                 Why Intern at Stemora?
               </h2>
@@ -82,9 +82,9 @@ export default function Internships() {
         </section>
 
         {/* What You'll Do */}
-        <section className="py-24 bg-gradient-to-br from-[#0A3D91]/5 via-[#5CE1E6]/8 to-[#FFDE59]/8">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-[#0A3D91]/5 via-[#5CE1E6]/8 to-[#FFDE59]/8">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-14 items-center">
+            <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
               <Reveal>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-5 tracking-tight">
                   What You'll Experience
@@ -135,9 +135,9 @@ export default function Internships() {
         </section>
 
         {/* Our Interns */}
-        <section className="py-24 bg-white">
+        <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
-            <Reveal className="text-center mb-14">
+            <Reveal className="text-center mb-10 md:mb-14">
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
                 Our Interns
               </h2>
@@ -145,7 +145,7 @@ export default function Internships() {
                 Meet the talented students currently working with us at Stemora.
               </p>
             </Reveal>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-5">
               {interns.map((intern, i) => (
                 <Reveal key={intern.name} delay={i * 0.06}>
                   <div className="card-premium bg-white border border-slate-100/80 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_2px_12px_rgba(10,61,145,0.06)] group">

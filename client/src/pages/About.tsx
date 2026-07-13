@@ -9,7 +9,7 @@ export default function About() {
       <Header />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="aurora aurora-dark relative overflow-hidden py-24 md:py-28 bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white">
+        <section className="aurora aurora-dark relative overflow-hidden py-16 md:py-28 bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white">
           <Reveal className="relative container mx-auto px-4 text-center">
             <div className="eyebrow eyebrow-dark mb-6 inline-flex">
               <Sparkles className="w-3.5 h-3.5" />
@@ -27,7 +27,7 @@ export default function About() {
         </section>
 
         {/* Mission & Vision */}
-        <section className="py-24 bg-gradient-to-b from-white to-slate-50/60">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-white to-slate-50/60">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-8">
               <Reveal>
@@ -64,15 +64,15 @@ export default function About() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-24 bg-gradient-to-br from-[#0A3D91]/5 via-[#5CE1E6]/10 to-[#FFDE59]/10">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-[#0A3D91]/5 via-[#5CE1E6]/10 to-[#FFDE59]/10">
           <div className="container mx-auto px-4">
-            <Reveal className="flex flex-col items-center text-center mb-16">
+            <Reveal className="flex flex-col items-center text-center mb-10 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
                 Why Choose Stemora?
               </h2>
             </Reveal>
 
-            <div className="grid md:grid-cols-4 gap-7">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-7">
               {[
                 {
                   icon: Users,
@@ -98,9 +98,9 @@ export default function About() {
                 const Icon = item.icon;
                 return (
                   <Reveal key={item.title} delay={i * 0.08}>
-                    <div className="card-premium bg-white border border-slate-100/80 rounded-2xl p-8 text-center h-full shadow-[0_2px_12px_rgba(10,61,145,0.06)] flex flex-col items-center">
-                      <div className="w-14 h-14 bg-gradient-to-br from-[#5CE1E6]/20 to-[#0A3D91]/10 rounded-xl flex items-center justify-center mx-auto mb-5">
-                        <Icon className="w-7 h-7 text-[#0A3D91]" />
+                    <div className="card-premium bg-white border border-slate-100/80 rounded-2xl p-5 md:p-8 text-center h-full shadow-[0_2px_12px_rgba(10,61,145,0.06)] flex flex-col items-center">
+                      <div className="w-11 h-11 md:w-14 md:h-14 bg-gradient-to-br from-[#5CE1E6]/20 to-[#0A3D91]/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <Icon className="w-5 h-5 md:w-7 md:h-7 text-[#0A3D91]" />
                       </div>
                       <h3 className="text-base font-bold mb-2 text-slate-900">
                         {item.title}
@@ -115,15 +115,15 @@ export default function About() {
         </section>
 
         {/* Meet Our Team */}
-        <section className="py-24 bg-gradient-to-b from-white to-slate-50/40">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-white to-slate-50/40">
           <div className="container mx-auto px-4">
-            <Reveal className="text-center mb-16">
+            <Reveal className="text-center mb-10 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
                 Meet Our Team
               </h2>
-              <p className="text-slate-500 mt-3 text-lg">The people behind Stemora's mission</p>
+              <p className="text-slate-500 mt-3 text-base md:text-lg">The people behind Stemora's mission</p>
             </Reveal>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
               {[
                 { name: "Arjun Mehta", role: "Founder & CEO", color: "cyan" },
                 { name: "Priya Sharma", role: "Co-Founder", color: "yellow" },
@@ -131,7 +131,7 @@ export default function About() {
                 { name: "Sneha Iyer", role: "IT Lead", color: "yellow" },
               ].map((member: { name: string; role: string; color: string }, i) => (
                 <Reveal key={member.name} delay={i * 0.08}>
-                  <div className="card-premium bg-white border border-slate-100/80 rounded-2xl p-8 flex flex-col items-center text-center shadow-[0_2px_12px_rgba(10,61,145,0.06)] group transition-all relative overflow-hidden">
+                  <div className="card-premium bg-white border border-slate-100/80 rounded-2xl p-5 md:p-8 flex flex-col items-center text-center shadow-[0_2px_12px_rgba(10,61,145,0.06)] group transition-all relative overflow-hidden">
                     <div className={`absolute top-0 left-0 right-0 h-0.5 ${
                       member.color === "yellow"
                         ? "bg-gradient-to-r from-[#FFDE59]/50 via-[#FFDE59] to-[#FFDE59]/50"

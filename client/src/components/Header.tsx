@@ -63,7 +63,7 @@ export default function Header({ onContactClick }: HeaderProps) {
         }`}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20 gap-6">
+          <div className="flex items-center justify-between h-16 md:h-20 gap-4">
 
             {/* LOGO */}
             <a href="/" className="logo-mark shrink-0 ml-2 md:ml-4" aria-label="Stemora home">
@@ -181,7 +181,7 @@ export default function Header({ onContactClick }: HeaderProps) {
                     ) : (
                       <a
                         href={item.href}
-                        className="block py-2.5 px-2 text-foreground font-medium hover:text-primary transition-colors"
+                        className="block py-3 px-3 text-foreground font-medium hover:text-primary transition-colors"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {item.label}
