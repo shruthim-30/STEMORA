@@ -125,10 +125,10 @@ export default function About() {
             </Reveal>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
               {[
-                { name: "Arjun Mehta", role: "Founder & CEO", color: "cyan" },
-                { name: "Priya Sharma", role: "Director", color: "yellow" },
-                { name: "Rahul Nair", role: "Production Head", color: "cyan" },
-                { name: "Iyer", role: "Software Lead", color: "yellow" },
+                { name: "Praveen S", role: "Founder & CEO", color: "cyan" },
+                { name: "yzx", role: "Director", color: "yellow" },
+                { name: "pmj", role: "Production Head", color: "cyan" },
+                { name: "abc", role: "Software Lead", color: "yellow" },
               ].map((member: { name: string; role: string; color: string }, i) => (
                 <Reveal key={member.name} delay={i * 0.08}>
                   <div className="card-premium bg-white border border-slate-100/80 rounded-2xl p-5 md:p-8 flex flex-col items-center text-center shadow-[0_2px_12px_rgba(10,61,145,0.06)] group transition-all relative overflow-hidden">

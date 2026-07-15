@@ -5,7 +5,7 @@ import ContactFormModal from "@/components/ContactFormModal";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Courses", href: "/courses" },
+  { label: "Courses", href: "/courses", submenu: true },
   { label: "Internships", href: "/internships" },
   { label: "Robotics Expo", href: "/robotics-expo" },
   { label: "About Us", href: "/about" },
@@ -63,23 +63,19 @@ export default function Header({ onContactClick }: HeaderProps) {
         }`}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16 md:h-20 gap-4">
+          <div className="flex items-center justify-between h-20 md:h-24 gap-4">
 
-            {/* LOGO */}
-           {/* LOGO */}
+{/* LOGO */}
+{/* LOGO */}
 <a
   href="/"
-  className="flex items-center shrink-0 ml-2 md:ml-9"
+  className="flex items-center shrink-0"
   aria-label="Stemora Home"
 >
   <img
-    src="/shru.webp"
+    src="/shru-cropped.webp"
     alt="Stemora"
-    style={{
-      width: "400px",
-      height: "70px",
-      objectFit: "contain",
-    }}
+    className="h-10 w-auto md:h-12 lg:h-14 object-contain"
   />
 </a>
 
@@ -88,7 +84,7 @@ export default function Header({ onContactClick }: HeaderProps) {
               {navItems.map((item) => (
                 <div key={item.label} className="relative group">
                   <a
-                    href={item.href}
+                              href={item.href}
                     className="flex items-center gap-1 px-4 py-2.5 rounded-full text-[0.925rem] font-medium text-foreground/80 hover:text-foreground hover:bg-foreground/[0.04] transition-colors duration-200"
                   >
                     {item.label}

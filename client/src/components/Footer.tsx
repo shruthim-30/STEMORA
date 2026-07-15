@@ -39,7 +39,7 @@ export default function Footer() {
               className="inline-flex justify-center sm:justify-start mb-5"
             >
               <img
-                src="/logop.jpg"
+                src="/shru-cropped.webp"
                 alt="STEMORA Logo"
                 className="h-16 w-auto rounded-md object-contain"
               />
@@ -179,9 +179,9 @@ export default function Footer() {
             </a>
           </div>
 
-          <p className="text-center text-xs text-gray-500">
-            © {new Date().getFullYear()} STEMORA. All Rights Reserved.
-          </p>
+         <p className="text-center text-xs text-gray-500">
+  © 2025 STEMORA. All Rights Reserved.
+</p>
         </div>
       </div>
     </footer>
