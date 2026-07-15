@@ -162,7 +162,7 @@ export default function Footer() {
 
           <div className="flex justify-center gap-2 mb-6">
             <a
-              href="https://www.instagram.com/stemora_india"
+              href="https://www.instagram.com/stemora_in?igsh=dGJwMzY5bzJpNGh0"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full hover:bg-white/10 transition"

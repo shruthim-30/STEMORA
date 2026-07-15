@@ -52,9 +52,9 @@ const courses = [
 ];
 
 const galleryImages = [
-  { id: 1, src: "/g1.jpg", title: "Workshop" },
-  { id: 2, src: "/g2.jpg", title: "Classroom Learning" },
-  { id: 3, src: "/g6.jpg", title: "Student Success" },
+  { id: 1, src: "/1.jpg", title: "Workshop" },
+  { id: 2, src: "/C.jpg", title: "Classroom Learning" },
+  { id: 3, src: "/E.jpg", title: "Student Success" },
 ];
 
 const coreOfferings = [
@@ -74,7 +74,7 @@ const partnerLogos = ["/arduino-logo.png", "/prr.png", "/microbit.png",
 
 export default function Home() {
   const [counters, setCounters] = useState({ mentors: 0, schools: 0, internships: 0, exhibitions: 0 });
-  const heroImages = ["/g1.jpg", "/g3.jpg", "/hero6.jpg"];
+  const heroImages = ["/B.jpg", "/H.jpg", "/G.jpg", "/I.jpg", "/J.jpg"];
   const [currentImage, setCurrentImage] = useState(0);
   const [contactModalOpen, setContactModalOpen] = useState(false);
   const [expoModalOpen, setExpoModalOpen] = useState(false);
@@ -319,76 +319,7 @@ export default function Home() {
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end">
-                    <p className="text-white text-sm font-semibold p-5">{img.title}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* ===== TESTIMONIALS ===== */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-slate-50/80 to-white">
-        <div className="container mx-auto px-4">
-          <Reveal className="flex flex-col items-center text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Testimonials
-            </h2>
-            <p className="text-slate-500 mt-4 max-w-xl text-base leading-relaxed">
-              Hear from school leaders who have partnered with Stemora.
-            </p>
-          </Reveal>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Dr. Sunita Rao",
-                role: "Principal, Delhi Public School, Bengaluru",
-                text: "Partnering with Stemora has been a game-changer for our STEM curriculum. Students are more engaged, curious, and confident than ever. Their structured approach to robotics education is truly world-class.",
-                initials: "SR",
-                color: "blue",
-              },
-              {
-                name: "Mr. Anil Krishnamurthy",
-                role: "Principal, Kendriya Vidyalaya, Bengaluru",
-                text: "Stemora's team brought energy and expertise that our students had never experienced before. The robotics workshops sparked a passion for engineering across all grade levels.",
-                initials: "AK",
-                color: "yellow",
-              },
-              {
-                name: "Mrs. Lakshmi Venkatesh",
-                role: "Principal, National Public School, Bengaluru",
-                text: "Our students represented the school at a national robotics competition after just one term with Stemora. The quality of mentorship and curriculum is outstanding.",
-                initials: "LV",
-                color: "blue",
-              },
-            ].map((t, i) => (
-              <Reveal key={t.name} delay={i * 0.08}>
-                <div className="card-premium group bg-white border border-slate-100/80 rounded-2xl p-8 h-full flex flex-col gap-5 shadow-[0_2px_12px_rgba(10,61,145,0.06)] relative overflow-hidden">
-                  <div className={`absolute top-0 left-0 right-0 h-0.5 ${
-                    t.color === "yellow" ? "bg-gradient-to-r from-[#FFDE59]/60 via-[#FFDE59] to-[#FFDE59]/60" : "bg-gradient-to-r from-[#5CE1E6]/60 via-[#5CE1E6] to-[#5CE1E6]/60"
-                  }`} />
-                  <div className="flex items-center gap-4">
-                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-base font-bold shrink-0 ${
-                      t.color === "yellow" ? "bg-gradient-to-br from-[#FFDE59]/40 to-[#FFDE59]/20 text-[#7a5f00]" : "bg-gradient-to-br from-[#5CE1E6]/25 to-[#0A3D91]/10 text-[#0A3D91]"
-                    }`}>
-                      {t.initials}
-                    </div>
-                    <div>
-                      <div className="text-sm font-bold text-slate-900">{t.name}</div>
-                      <div className="text-xs text-slate-400 mt-0.5">{t.role}</div>
-                    </div>
-                  </div>
-                  <div className="flex gap-0.5">
-                    {[...Array(5)].map((_, j) => (
-                      <svg key={j} className="w-4 h-4 fill-[#FFDE59]" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <p className="text-slate-500 leading-relaxed text-sm flex-1 italic">"{t.text}"</p>
                 </div>
               </Reveal>
             ))}

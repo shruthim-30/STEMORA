@@ -66,13 +66,22 @@ export default function Header({ onContactClick }: HeaderProps) {
           <div className="flex items-center justify-between h-16 md:h-20 gap-4">
 
             {/* LOGO */}
-            <a href="/" className="logo-mark shrink-0 ml-2 md:ml-4" aria-label="Stemora home">
-              <img
-                src="/logop.jpg"
-                alt="Stemora"
-                className="h-16 md:h-20 w-auto object-contain rounded-md"
-              />
-            </a>
+           {/* LOGO */}
+<a
+  href="/"
+  className="flex items-center shrink-0 ml-2 md:ml-9"
+  aria-label="Stemora Home"
+>
+  <img
+    src="/shru.webp"
+    alt="Stemora"
+    style={{
+      width: "400px",
+      height: "70px",
+      objectFit: "contain",
+    }}
+  />
+</a>
 
             {/* DESKTOP NAV */}
             <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">

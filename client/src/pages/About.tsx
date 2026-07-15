@@ -119,16 +119,16 @@ export default function About() {
           <div className="container mx-auto px-4">
             <Reveal className="text-center mb-10 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Meet Our Team
+                Meet Our Leaders
               </h2>
               <p className="text-slate-500 mt-3 text-base md:text-lg">The people behind Stemora's mission</p>
             </Reveal>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
               {[
                 { name: "Arjun Mehta", role: "Founder & CEO", color: "cyan" },
-                { name: "Priya Sharma", role: "Co-Founder", color: "yellow" },
-                { name: "Rahul Nair", role: "Production Director", color: "cyan" },
-                { name: "Sneha Iyer", role: "IT Lead", color: "yellow" },
+                { name: "Priya Sharma", role: "Director", color: "yellow" },
+                { name: "Rahul Nair", role: "Production Head", color: "cyan" },
+                { name: "Iyer", role: "Software Lead", color: "yellow" },
               ].map((member: { name: string; role: string; color: string }, i) => (
                 <Reveal key={member.name} delay={i * 0.08}>
                   <div className="card-premium bg-white border border-slate-100/80 rounded-2xl p-5 md:p-8 flex flex-col items-center text-center shadow-[0_2px_12px_rgba(10,61,145,0.06)] group transition-all relative overflow-hidden">

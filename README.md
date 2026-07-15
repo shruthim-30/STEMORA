@@ -1,174 +1,47 @@
-# STEMORA - Robotics & STEM Education Platform
+# STEMORA — Project Description (for Resume)
 
-A professional, production-ready full-stack website for STEMORA, showcasing robotics and STEM education programs with integrated contact management and email notifications.
+## What I Built
 
-## 🎯 Features
+I designed and developed a complete production website from scratch for **STEMORA**, a Bengaluru-based robotics and STEM education startup. The platform is their primary digital presence — showcasing programs, capturing leads, and automating business communications.
 
-- **Responsive Design** - Mobile-first approach with Tailwind CSS
-- **Interactive Hero Section** - Animated counters showing key metrics
-- **Course Showcase** - Detailed descriptions of robotics and STEM programs
-- **Contact Forms** - "Book Free Class" and "Book a Slot" with backend integration
-- **Email Notifications** - Automatic notifications to business owner on submissions
-- **Database Integration** - PostgreSQL for persistent data storage
-- **Professional Branding** - Custom color scheme (cyan #5CE1E6, yellow #FFDE59)
-- **Fully Tested** - Comprehensive unit tests with Vitest
+## Tech Stack
 
-## 🛠️ Tech Stack
+- **Frontend:** React 19, TypeScript, Tailwind CSS v4, Wouter (routing), Lucide React (icons)
+- **Backend:** Node.js, Express 4
+- **API Layer:** tRPC v11 — end-to-end type-safe API between frontend and backend, no REST boilerplate
+- **Database:** PostgreSQL with Drizzle ORM for schema management and type-safe queries
+- **Email:** Nodemailer + Brevo SMTP API — automated email notifications on every form submission
+- **Build Tool:** Vite
+- **Testing:** Vitest
+- **Package Manager:** pnpm
 
-| Layer | Technology |
-|-------|-----------|
-| Frontend | React 19 + Tailwind CSS 4 + TypeScript |
-| Backend | Node.js + Express 4 + tRPC 11 |
-| Database | PostgreSQL (MySQL compatible) |
-| Testing | Vitest |
-| Build | Vite |
+## What It Does
 
-## 📦 Quick Start
+- 6 fully routed pages: Home, Courses, Internships, Robotics Expo, About, Contact
+- Lead capture forms (Book Free Class, Book a Slot, Register Team) with validation, tRPC mutation, PostgreSQL persistence, and toast feedback
+- Every form submission automatically triggers a real-time email to the business owner via Brevo SMTP API + Nodemailer, containing the user's name, email, phone, course interest, and message
+- Fully responsive mobile-first UI with adaptive grids and proper touch targets
+- Animated hero image slideshow with dot navigation
+- Live-counting stat chips (Mentors, Schools, Internships, Exhibitions)
+- Scroll reveal animations using a custom Reveal component
+- Sticky glassmorphism header with scroll-aware shadow and animated mobile menu
+- Infinite CSS marquee for partner/technology logos
+- Consistent brand design system: Cyan #5CE1E6, Yellow #FFDE59, Navy #0A3D91
 
-### Prerequisites
-- Node.js 18+
-- pnpm (or npm/yarn)
-- VSCode (recommended)
+## Pages
 
-### Installation
+- **Home** — Hero slideshow, Our Programs (5 cards), Core Offerings (6 cards), Internship CTA, Gallery, Testimonials, Partners marquee, CTA section
+- **Courses** — 5 course cards (Young Innovators, Robotics Base, Robotics Circuit, Summer Camps, Exhibitions) with highlights and Book Free Class CTA
+- **Internships** — Perks, experience checklist, program details card, intern showcase grid
+- **Robotics Expo** — Event details, competition categories, event schedule timeline, eligibility, registration CTA
+- **About** — Mission & Vision cards, Why Choose Stemora (4 cards), Meet Our Team (4 cards)
+- **Contact** — Clickable contact info (email, phone, map), Book Free Class CTA card
 
-```bash
-# Install dependencies
-pnpm install
+## Email Flow
 
-# Setup database
-pnpm db:push
-
-# Start development server
-pnpm dev
-```
-
-Visit `http://localhost:3000` in your browser.
-
-## 📚 Documentation
-
-- **[SETUP_GUIDE.md](./SETUP_GUIDE.md)** - Comprehensive setup and configuration guide
-- **[QUICK_START.md](./QUICK_START.md)** - Quick reference for common tasks
-- **[todo.md](./todo.md)** - Project feature tracking
-
-## 🧪 Testing
-
-```bash
-# Run all tests
-pnpm test
-
-# Run specific test file
-pnpm test server/contact.submit.test.ts
-```
-
-## 🏗️ Project Structure
-
-```
-stemora-website/
-├── client/              # React frontend
-│   ├── src/
-│   │   ├── components/  # Reusable components
-│   │   ├── pages/       # Page components
-│   │   └── lib/         # Utilities and configs
-│   └── public/          # Static assets
-├── server/              # Node.js backend
-│   ├── routers.ts       # tRPC procedures
-│   ├── db.ts            # Database queries
-│   └── _core/           # Framework internals
-├── drizzle/             # Database schema
-└── shared/              # Shared types
-```
-
-## 🚀 Deployment
-
-### Manus Platform
-```bash
-# Create checkpoint (required before publishing)
-pnpm build
-
-# Click Publish in Management UI
-```
-
-### Other Platforms
-```bash
-# Build production bundle
-pnpm build
-
-# Deploy dist/ folder to your hosting provider
-pnpm start
-```
-
-## 🎨 Customization
-
-### Update Colors
-Edit `client/src/index.css` to change the primary and secondary colors.
-
-### Change Logo
-Replace `client/public/logo.png` with your logo.
-
-### Modify Content
-- Header: `client/src/components/Header.tsx`
-- Footer: `client/src/components/Footer.tsx`
-- Home Page: `client/src/pages/Home.tsx`
-
-## 📧 Email Notifications
-
-The website automatically sends email notifications to the business owner when:
-- A user submits the "Book Free Class" form
-- A user submits the "Book a Slot" form
-
-Notifications include user details and message content.
-
-## 🔐 Environment Variables
-
-Required environment variables (automatically provided by Manus):
-- `DATABASE_URL` - Database connection string
-- `JWT_SECRET` - Session signing secret
-- `VITE_APP_ID` - OAuth application ID
-- `OAUTH_SERVER_URL` - OAuth server URL
-- `BUILT_IN_FORGE_API_URL` - Manus API URL
-- `BUILT_IN_FORGE_API_KEY` - Manus API key
-
-## 🐛 Troubleshooting
-
-### Port Already in Use
-The dev server will automatically use the next available port. Check terminal output for the actual URL.
-
-### Database Connection Error
-Verify `DATABASE_URL` is set correctly and the database is running.
-
-### Form Submissions Not Working
-1. Check backend is running (`pnpm dev`)
-2. Check browser console for errors
-3. Verify database connection
-4. Check email notification settings
-
-## 📞 Support
-
-For detailed setup instructions, see [SETUP_GUIDE.md](./SETUP_GUIDE.md)
-
-For quick reference, see [QUICK_START.md](./QUICK_START.md)
-
-## 📄 License
-
-Proprietary - All rights reserved to STEMORA
-
-## 👨‍💻 Development
-
-### Available Scripts
-
-```bash
-pnpm dev          # Start development server
-pnpm build        # Build production bundle
-pnpm start        # Start production server
-pnpm test         # Run tests
-pnpm check        # TypeScript type check
-pnpm format       # Format code with Prettier
-pnpm db:push      # Push database schema changes
-```
-
----
-
-**STEMORA** - Lighting Young Minds through STEM Education
-
-Built with ❤️ using React, Node.js, and modern web technologies.
+1. User submits a form on the website
+2. Frontend sends data via tRPC mutation
+3. Backend validates and saves to PostgreSQL via Drizzle ORM
+4. Backend calls Nodemailer with Brevo SMTP credentials
+5. Business owner receives a formatted email with all lead details
+6. User sees a success toast and the form resets
