@@ -5,7 +5,7 @@ import ContactFormModal from "@/components/ContactFormModal";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Courses", href: "/courses", submenu: true },
+  { label: "Courses", href: "/courses" },
   { label: "Internships", href: "/internships" },
   { label: "Robotics Expo", href: "/robotics-expo" },
   { label: "About Us", href: "/about" },
