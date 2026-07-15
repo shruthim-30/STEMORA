@@ -19,6 +19,7 @@ import {
   Briefcase,
   Star,
 } from "lucide-react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -137,13 +138,16 @@ export default function Home() {
                     Get In Touch
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
-                  <Button
-                    variant="outline"
-                    onClick={() => document.getElementById("cour")?.scrollIntoView({ behavior: "smooth" })}
-                    className="rounded-full px-8 h-12 font-semibold border-slate-200 text-slate-700 hover:border-[#5CE1E6] hover:text-[#0A3D91] transition-colors"
-                  >
-                    Explore Courses
-                  </Button>
+                 
+<Button
+  asChild
+  variant="outline"
+  className="rounded-full px-8 h-12 font-semibold border-slate-200 text-slate-700 hover:border-[#5CE1E6] hover:text-[#0A3D91] transition-colors"
+>
+  <Link href="/courses">
+    Explore Courses
+  </Link>
+</Button>
                 </div>
               </Reveal>
 
