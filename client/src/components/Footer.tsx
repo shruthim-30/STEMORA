@@ -1,6 +1,7 @@
 import {
   Instagram,
   Linkedin,
+  MessageCircle,
   Mail,
   Phone,
   MapPin,
@@ -31,7 +32,6 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10 pt-14 pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-
           {/* Logo */}
           <div className="text-center sm:text-left">
             <a
@@ -65,7 +65,6 @@ export default function Footer() {
                     className="group inline-flex items-center gap-1 text-sm text-gray-400 hover:text-cyan-400 transition"
                   >
                     {item.label}
-
                     <ArrowUpRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                   </a>
                 </li>
@@ -87,7 +86,6 @@ export default function Footer() {
                     className="group inline-flex items-center gap-1 text-sm text-gray-400 hover:text-yellow-400 transition"
                   >
                     {item.label}
-
                     <ArrowUpRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                   </a>
                 </li>
@@ -102,15 +100,13 @@ export default function Footer() {
             </h3>
 
             <div className="space-y-5">
-
               <a
                 href="mailto:stemoraeducation@gmail.com"
-                className="flex items-start gap-3 text-gray-400 hover:text-cyan-400 transition"
+                className="flex items-start justify-center sm:justify-start gap-3 text-gray-400 hover:text-cyan-400 transition"
               >
                 <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
                   <Mail className="w-4 h-4 text-cyan-400" />
                 </div>
-
                 <span className="text-sm break-words">
                   stemoraeducation@gmail.com
                 </span>
@@ -120,27 +116,23 @@ export default function Footer() {
                 href="https://wa.me/917090000417?text=Hi%20Stemora"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-3 text-gray-400 hover:text-cyan-400 transition"
+                className="flex items-start justify-center sm:justify-start gap-3 text-gray-400 hover:text-cyan-400 transition"
               >
                 <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
                   <Phone className="w-4 h-4 text-cyan-400" />
                 </div>
-
-                <span className="text-sm">
-                  +91 7090000417
-                </span>
+                <span className="text-sm">+91 7090000417</span>
               </a>
 
               <a
                 href="https://www.google.com/maps/dir/?api=1&destination=1300,+1st+Cross+Rd,+Geethanjali+Layout,+HAL+3rd+Stage,+Bengaluru+560075"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-3 text-gray-400 hover:text-cyan-400 transition"
+                className="flex items-start justify-center sm:justify-start gap-3 text-gray-400 hover:text-cyan-400 transition"
               >
                 <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
                   <MapPin className="w-4 h-4 text-cyan-400" />
                 </div>
-
                 <span className="text-sm leading-6 break-words">
                   HAL 3rd Stage,
                   <br />
@@ -148,40 +140,48 @@ export default function Footer() {
                   <br />
                   New Tippasandra,
                   <br />
-                  Bengaluru,
-                  Karnataka 560075,
-                  India
+                  Bengaluru, Karnataka 560075, India
                 </span>
               </a>
-
             </div>
           </div>
         </div>
 
-        <div className="mt-14 border-t border-white/10 pt-8">
-
-          <div className="flex justify-center gap-2 mb-6">
+        {/* Bottom Social Icons & Copyright Section */}
+        <div className="mt-14 border-t border-white/10 pt-8 flex flex-col items-center gap-4">
+          <div className="flex justify-center items-center gap-2">
+            <a
+              href="https://wa.me/917090000417"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className="p-3 rounded-full hover:bg-white/10 transition text-gray-300 hover:text-white"
+            >
+              <MessageCircle className="w-5 h-5" />
+            </a>
             <a
               href="https://www.instagram.com/stemora_in?igsh=dGJwMzY5bzJpNGh0"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full hover:bg-white/10 transition"
+              aria-label="Instagram"
+              className="p-3 rounded-full hover:bg-white/10 transition text-gray-300 hover:text-white"
             >
-              <Instagram className="w-5 h-5 text-gray-300 hover:text-white" />
+              <Instagram className="w-5 h-5" />
             </a>
             <a
               href="https://www.linkedin.com/company/stemora-india/posts/?feedView=all"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full hover:bg-white/10 transition"
+              aria-label="LinkedIn"
+              className="p-3 rounded-full hover:bg-white/10 transition text-gray-300 hover:text-white"
             >
-              <Linkedin className="w-5 h-5 text-gray-300 hover:text-white" />
+              <Linkedin className="w-5 h-5" />
             </a>
           </div>
 
-         <p className="text-center text-xs text-gray-500">
-  © 2025 STEMORA. All Rights Reserved.
-</p>
+          <p className="text-center text-xs text-gray-500">
+            © {new Date().getFullYear()} STEMORA. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
