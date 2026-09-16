@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
-import { Users, Target, Award, BookOpen, Sparkles, Quote } from "lucide-react";
+import { Users, Target, Award, BookOpen, Sparkles } from "lucide-react";
 
 export default function About() {
   return (
@@ -110,83 +110,6 @@ export default function About() {
                   </Reveal>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        {/* Message from the Leaders */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-white to-slate-50/40">
-          <div className="container mx-auto px-4">
-            <Reveal className="text-center mb-10 md:mb-16">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Message from the Leaders
-              </h2>
-              <p className="text-slate-500 mt-3 text-base md:text-lg">
-                The people behind Stemora's mission
-              </p>
-            </Reveal>
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
-              {[
-                {
-                  name: "Praveen S K",
-                  role: "Founder & CEO",
-                  color: "cyan",
-                  message:
-                    "At STEMORA, we don’t just teach technology — we inspire students to create it. We believe innovation begins with curiosity and grows through hands-on experience. Our mission is to build future-ready minds through STEM, robotics, coding, and AI. We empower students to think boldly, solve real problems, and turn ideas into reality. We are not preparing students for the future; we are preparing them to shape it.",
-                },
-                {
-                  name: "Calvin Anthony",
-                  role: "Co-Founder & Director",
-                  color: "yellow",
-                  message:
-                    "STEMORA is built on one belief — learning should lead to creating. We give students the freedom to explore, experiment, and build with technology. Our programs turn classrooms into spaces of innovation and discovery. We focus on developing creativity, confidence, and problem-solving alongside technical skills. Together, we are building the thinkers, makers, and innovators of tomorrow.",
-                },
-              ].map(
-                (
-                  leader: {
-                    name: string;
-                    role: string;
-                    color: string;
-                    message: string;
-                  },
-                  i,
-                ) => (
-                  <Reveal key={leader.name} delay={i * 0.08}>
-                    <div className="card-premium bg-white border border-slate-100/80 rounded-2xl p-6 md:p-9 h-full shadow-[0_2px_12px_rgba(10,61,145,0.06)] relative overflow-hidden">
-                    <div className={`absolute top-0 left-0 right-0 h-0.5 ${
-                      leader.color === "yellow"
-                        ? "bg-gradient-to-r from-[#FFDE59]/50 via-[#FFDE59] to-[#FFDE59]/50"
-                        : "bg-gradient-to-r from-[#5CE1E6]/50 via-[#5CE1E6] to-[#5CE1E6]/50"
-                    }`} />
-                    <Quote className={`w-9 h-9 mb-5 ${
-                      leader.color === "yellow" ? "text-[#8a6d00]/45" : "text-[#0A3D91]/45"
-                    }`} />
-                    <p className="text-slate-600 leading-relaxed text-[0.95rem] mb-7">
-                      {leader.message}
-                    </p>
-                    <div className="flex items-center gap-3">
-                      <div className={`w-10 h-10 rounded-full flex items-center justify-center border ${
-                        leader.color === "yellow"
-                          ? "bg-[#FFDE59]/25 border-[#FFDE59]/30"
-                          : "bg-[#5CE1E6]/20 border-[#5CE1E6]/30"
-                      }`}>
-                        <Users className={`w-5 h-5 ${
-                          leader.color === "yellow" ? "text-[#8a6d00]/70" : "text-[#0A3D91]/70"
-                        }`} />
-                      </div>
-                      <div>
-                        <h3 className="text-base font-bold text-slate-900">{leader.name}</h3>
-                        <span className={`text-xs font-semibold ${
-                          leader.color === "yellow" ? "text-[#8a6d00]" : "text-[#0A3D91]"
-                        }`}>
-                          {leader.role}
-                        </span>
-                      </div>
-                    </div>
-                    </div>
-                  </Reveal>
-                ),
-              )}
             </div>
           </div>
         </section>
