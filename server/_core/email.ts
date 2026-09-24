@@ -1,11 +1,15 @@
 import SibApiV3Sdk from "sib-api-v3-sdk";
 
-const client = SibApiV3Sdk.ApiClient.instance;
-
-const apiKey = client.authentications["api-key"];
-apiKey.apiKey = process.env.BREVO_API_KEY!;
-
-const emailApi = new SibApiV3Sdk.TransactionalEmailsApi();
+export const ENV = {
+  appId: process.env.VITE_APP_ID ?? "",
+  cookieSecret: process.env.JWT_SECRET ?? "",
+  databaseUrl: process.env.DATABASE_URL ?? "",
+  oAuthServerUrl: process.env.OAUTH_SERVER_URL ?? "",
+  ownerOpenId: process.env.OWNER_OPEN_ID ?? "",
+  isProduction: process.env.NODE_ENV === "production",
+  forgeApiUrl: process.env.BUILT_IN_FORGE_API_URL ?? "",
+  forgeApiKey: process.env.BUILT_IN_FORGE_API_KEY ?? "",
+};
 
 export async function sendContactEmail(data: {
   fullName: string;
@@ -15,6 +19,20 @@ export async function sendContactEmail(data: {
   message?: string | null;
   formType: "book_free_class" | "book_expo_slot";
 }) {
+  // 1. Fetch the API key dynamically when the function runs
+  const brevoApiKey = process.env.BREVO_API_KEY;
+
+  if (!brevoApiKey) {
+    throw new Error("BREVO_API_KEY is not defined in GoDaddy environment variables.");
+  }
+
+  // 2. Initialize Brevo client inside the execution scope
+  const client = SibApiV3Sdk.ApiClient.instance;
+  const apiKeyAuth = client.authentications["api-key"];
+  apiKeyAuth.apiKey = brevoApiKey;
+
+  const emailApi = new SibApiV3Sdk.TransactionalEmailsApi();
+
   const subject =
     data.formType === "book_free_class"
       ? "New Free Class Booking – Stemora"
@@ -35,25 +53,26 @@ export async function sendContactEmail(data: {
   `;
 
   try {
-    const result = await emailApi.sendTransacEmail({
-      sender: {
-        name: "Stemora",
+    const sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
+    sendSmtpEmail.sender = {
+      name: "Stemora",
+      email: "stemoraeducation@gmail.com",
+    };
+    sendSmtpEmail.to = [
+      {
         email: "stemoraeducation@gmail.com",
       },
-      to: [
-        {
-          email: "stemoraeducation@gmail.com",
-        },
-      ],
-      replyTo: {
-        email: data.email,
-      },
-      subject,
-      htmlContent,
-    });
+    ];
+    sendSmtpEmail.replyTo = {
+      email: data.email,
+    };
+    sendSmtpEmail.subject = subject;
+    sendSmtpEmail.htmlContent = htmlContent;
 
-    console.log("Email sent successfully");
-    console.log(result);
+    const result = await emailApi.sendTransacEmail(sendSmtpEmail);
+
+    console.log("Email sent successfully:", result);
+    return result;
   } catch (err) {
     console.error("Brevo Error:", err);
     throw err;
